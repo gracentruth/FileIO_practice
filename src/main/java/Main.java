@@ -1,3 +1,4 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,9 +17,18 @@ public class Main {
         int a=0;
 
         while((a=reader.read())!=-1){
-            System.out.println((char)a);
+           // System.out.println((char)a);
         }
-        //
+        // FileReader
+
+        //2. BufferReader
+        BufferedReader br=new BufferedReader(new FileReader(file));
+
+        String str;
+        while((str=br.readLine())!=null){
+            System.out.println(str);
+        }
+        //BufferReader
 
     }
 
